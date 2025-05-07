@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+    <h1>Job Application Form</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Full Name:
+                <input type="text" name="fullname" placeholder="Joshua Peter" required minlength="3" maxlength="20">
+            </label><br><br>
+
+            <label>Email:
+                <input type="email" name="email" placeholder="joshuapeter@gmail.com" required>
+            </label><br><br>
+
+            <label>Password:
+                <input type="password" name="password" required minlength="6">
+            </label><br><br>
+
+            <label>Phone Number:
+                <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="0712345678" required>
+            </label><br><br>
+
+            <label>Date of Birth:
+                <input type="date" name="dob" required>
+            </label><br><br>
+
+            <label>Gender:
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+            </label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Job Preferences</legend>
+
+            <label>Desired Position:
+                <input type="text" name="position" placeholder="Frontend Developer" required>
+            </label><br><br>
+
+            <label>Preferred Location:
+                <select name="location" required>
+                    <option value="">Select location</option>
+                    <option value="nairobi">Nairobi</option>
+                    <option value="lagos">Lagos</option>
+                    <option value="kampala">Kampala</option>
+                </select>
+            </label><br><br>
+
+            <label>Availability:
+                <input type="date" name="availability" required>
+            </label><br><br>
+
+            <label>Expected Salary:
+                <input type="number" name="salary" min="30000" max="500000" step="5000" placeholder="KES">
+            </label><br><br>
+
+            <label>Portfolio Website:
+                <input type="url" name="portfolio" placeholder="https://yourportfolio.com">
+            </label><br><br>
+
+            <label>Skills:
+                <input type="text" name="skills" placeholder="React, Node.js" required>
+            </label><br><br>
+
+            <label>Resume (PDF only):
+                <input type="file" name="resume" accept=".pdf" required>
+            </label><br><br>
+
+            <label>Profile Picture:
+                <input type="file" name="photo" accept="image/*">
+            </label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Info</legend>
+
+            <label>Availability per Week (hours):
+                <input type="range" name="hours" min="0" max="60" step="5">
+            </label><br><br>
+
+            <label>Motivation Letter:
+                <textarea name="motivation" placeholder="Why should we hire you?" minlength="50" maxlength="1000"
+                    required></textarea>
+            </label><br><br>
+
+            <label>Are you willing to relocate?
+                <input type="checkbox" name="relocate" value="yes">
+            </label><br><br>
+
+        </fieldset>
+
+        <div>
+            <button type="reset">Clear Form</button>
+            <button type="submit">Submit Application</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
